@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<form action="{{ url_for('search_open') }}" method="post">
+    <div class="container">
+        <label for="open_food" class="form-label">Ingresa lo que necesitas</label>
+        <input type="text" id="open_food=" class="form-control" placeholder="Ejemplo: agua" required>
+    </div>
+    <div class="text-center mb-3">
+        <button type="submit" class="btn btn-success">Buscar</button>
+    </div>
+</form>
+
+{% endblock %}

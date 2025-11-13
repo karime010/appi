@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+<div class="card" style="width: 18rem;">
+    <h2>{{ pokemon.name }} (ID: {{pokemon.id}})</h2>
+    <img src="{{ pokemon.image }}" class="card-img-top" alt="{{ pokemon.name }}">
+<div class="card-body">
+    <p>Peso: {{ pokemon.weight }} kg</p> 
+    <p>Altura: {{ pokemon.height }}m</p>
+    <p>Tipos: {{ pokemon.types | join(', ') }}</p>
+    <p>Habilidades: {{ pokemon.abilities | join(', ') }}</p>
+    <a href="{{url_for('index') }}" class="btn btn-primary">Volver a inicio</a>
+</div>
+</div>
+
+{% endblock %}
