@@ -9,12 +9,11 @@
     {% endif %}
 
 <div class="card-body">
-    <p><srong>Marca:</srong> {{ product.brand }}</p> 
+    <p><strong>Marca:</strong> {{ product.brand }}</p> 
     <p><strong>Cantidad:</strong> {{ product.quantity }}</p>
     <p><strong>Calorias:</strong> {{ product.calories }}</p>
     <p><strong>Grasas:</strong> {{ product.fat }}</p>
     <a href="{{url_for('index') }}" class="btn btn-primary">Volver a inicio</a>
 </div>
 </div>
-
 {% endblock %}
