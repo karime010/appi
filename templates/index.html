@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block contenido %}
 
-<form action="{{ url_for('search_open') }}" method="post">
+<form action="{{ url_for('search_open') }}" method="POST">
     <div class="container">
-        <label for="open_food" class="form-label">Ingresa lo que necesitas</label>
-        <input type="text" id="open_food=" class="form-control" placeholder="Ejemplo: agua" required>
+        <label for="open_food" class="form-label">Ingresa el codigo de barras del producto</label>
+        <input type="text" name= barcode id="open_food" class="form-control" placeholder="Ejemplo:7501055300101 " required>
     </div>
     <div class="text-center mb-3">
         <button type="submit" class="btn btn-success">Buscar</button>

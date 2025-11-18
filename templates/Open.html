@@ -1,14 +1,18 @@
 {% extends "base.html" %}
 {% block contenido %}
 
-<div class="card" style="width: 18rem;">
-    <h2>{{ pokemon.name }} (ID: {{pokemon.id}})</h2>
-    <img src="{{ pokemon.image }}" class="card-img-top" alt="{{ pokemon.name }}">
+<div class="card" style="width: 25rem;">
+    <h2>{{ product.name }}</h2>
+
+    {% if product.image %}
+    <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name }}">
+    {% endif %}
+
 <div class="card-body">
-    <p>Peso: {{ pokemon.weight }} kg</p> 
-    <p>Altura: {{ pokemon.height }}m</p>
-    <p>Tipos: {{ pokemon.types | join(', ') }}</p>
-    <p>Habilidades: {{ pokemon.abilities | join(', ') }}</p>
+    <p><srong>Marca:</srong> {{ product.brand }}</p> 
+    <p><strong>Cantidad:</strong> {{ product.quantity }}</p>
+    <p><strong>Calorias:</strong> {{ product.calories }}</p>
+    <p><strong>Grasas:</strong> {{ product.fat }}</p>
     <a href="{{url_for('index') }}" class="btn btn-primary">Volver a inicio</a>
 </div>
 </div>
